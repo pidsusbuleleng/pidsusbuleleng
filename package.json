@@ -1,0 +1,13 @@
+{
+  "name": "word-template-web",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "docxtemplater": "^3.37.0",
+    "googleapis": "^105.0.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "pizzip": "^3.1.6",
+    "dotenv": "^16.0.3"
+  }
+}
