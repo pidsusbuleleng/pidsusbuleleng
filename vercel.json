@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": true,
   "builds": [
     {
       "src": "server.js",
@@ -9,12 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/Asset/(.*)",
+      "src": "/(.*\\.(?:jpg|jpeg|png|gif|svg|ico|css|js|woff|woff2|ttf|eot|html|doc|docx))",
       "dest": "/Asset/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/server.js"
     }
   ]
 }
