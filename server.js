@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('Asset'));
 
 // Konfigurasi utama yang mencakup tahapan dan template di dalamnya
 const configs = {
@@ -88,7 +89,7 @@ app.get('/', (req, res) => {
                     height: 100%;
                 }
                 body {
-                    background-image: url('https://www.iclarified.com/images/news/97556/465557/465557.jpg');
+                    background-image: url('back.jpg');
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
@@ -276,7 +277,7 @@ app.get('/templates', (req, res) => {
                     height: 100%;
                 }
                 body {
-                    background-image: url('https://www.iclarified.com/images/news/97556/465557/465557.jpg');
+                    background-image: url('back.jpg');
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
@@ -840,4 +841,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });
-
