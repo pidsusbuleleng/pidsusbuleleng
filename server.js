@@ -230,6 +230,18 @@ app.get('/', (req, res) => {
                     border-top: 1px solid rgba(255, 255, 255, 0.1);
                     position: relative; /* Ubah dari fixed ke relative */
                 }
+                .form-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px; /* Memberi jarak antar elemen form */
+                }
+
+                @media (max-width: 600px) {
+                    .form-container {
+                        width: 90%; /* Buat lebar form 90% dari layar */
+                        padding: 10px;
+                    }
+                }
             </style>
         </head>
         <body>
