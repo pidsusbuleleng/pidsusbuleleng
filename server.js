@@ -90,7 +90,7 @@ app.get('/', (req, res) => {
                     height: 100%;
                 }
                 body {
-                    background-image: url('back.jpg');
+                    background-image: url('https://raw.githubusercontent.com/pidsusbuleleng/pidsusbuleleng/refs/heads/main/Asset/back.jpg');
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
@@ -278,7 +278,7 @@ app.get('/templates', (req, res) => {
                     height: 100%;
                 }
                 body {
-                    background-image: url('back.jpg');
+                    background-image: url('https://raw.githubusercontent.com/pidsusbuleleng/pidsusbuleleng/refs/heads/main/Asset/back.jpg');
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
@@ -842,4 +842,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });
-
