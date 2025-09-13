@@ -964,7 +964,7 @@ app.post('/generate', (req, res) => {
     }
 
     // Gabungkan nama template dan tanggal untuk nama file
-    const filename = `${templateKey}-${formattedDate}.docx`;
+    const filename = `${templateKey} ${formattedDate}.docx`;
 
     res.set('Content-Disposition', `attachment; filename="${filename}"`);
         res.send(buf);
@@ -974,3 +974,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });
+
