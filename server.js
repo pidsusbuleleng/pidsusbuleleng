@@ -3,6 +3,17 @@ const PizZip = require('pizzip');
 const Docxtemplater = require('docxtemplater');
 const fs = require('fs');
 const path = require('path');
+// Fungsi untuk mengubah format tanggal ke format Indonesia
+function formatDateID(dateString) {
+    if (!dateString) return '';
+    const [year, month, day] = dateString.split('-');
+    const monthNames = [
+        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+    ];
+    const monthName = monthNames[parseInt(month, 10) - 1];
+    return `${parseInt(day, 10)} ${monthName} ${year}`;
+}
 
 const app = express();
 app.use(express.static('Asset'));
@@ -64,12 +75,101 @@ const configs = {
     'penuntutan': {
         label: 'Penuntutan',
         templates: {
-            'surat4_tuntut': {
-                file: 'surat4.docx',
-                label: 'Surat 4 (Penuntutan)',
+            'P-36 BRI': {
+                file: 'P-36 BRI.docx',
+                label: 'P-36 BRI (Semua Terdakwa)',
                 fields: [
-                    { name: 'nama', label: 'Nama', type: 'text' },
-                    { name: 'tanggal_sidang', label: 'Tanggal Sidang', type: 'text' }
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
+                ]
+            },
+            'P-37 GEDE GAWATRA': {
+                file: 'P-37 GEDE GAWATRA.docx',
+                label: 'P-37 GEDE GAWATRA',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
+                ]
+            },
+            'P-37 I MADE DWI MEI ANGGARA': {
+                file: 'P-37 I MADE DWI MEI ANGGARA.docx',
+                label: 'P-37 I MADE DWI MEI ANGGARA',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
+                ]
+            },
+            'P-37 WAYAN EDI SUPARMAN': {
+                file: 'P-37 WAYAN EDI SUPARMAN.docx',
+                label: 'P-37 WAYAN EDI SUPARMAN',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
+                ]
+            },
+            'P-37 SAKSI BRI': {
+                file: 'P-37 SAKSI BRI.docx',
+                label: 'P-37 SAKSI BRI',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'namasaksi', label: 'Nama Saksi', type: 'text' },
+                    { name: 'tempatlahir', label: 'Tempat Lahir', type: 'text' },
+                    { name: 'umur', label: 'Umur', type: 'number' },
+                    { name: 'tgllahir', label: 'Tanggal Lahir', type: 'date' },
+                    { name: 'jeniskelamin', label: 'Jenis Kelamin', type: 'text' },
+                    { name: 'tempattinggal', label: 'Alamat', type: 'text' },
+                    { name: 'agama', label: 'Agama', type: 'text' },
+                    { name: 'pekerjaan', label: 'Pekerjaan', type: 'text' },
+                    { name: 'pendidikan', label: 'Pendidikan', type: 'text' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
+                ]
+            },
+            'P-38 GEDE GAWATRA': {
+                file: 'P-38 GEDE GAWATRA.docx',
+                label: 'P-38 GEDE GAWATRA',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
+                ]
+            },
+            'P-38 I MADE DWI MEI ANGGARA': {
+                file: 'P-38 I MADE DWI MEI ANGGARA.docx',
+                label: 'P-38 I MADE DWI MEI ANGGARA',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
+                ]
+            },
+             'P-38 WAYAN EDI SUPARMAN': {
+                file: 'P-38 WAYAN EDI SUPARMAN.docx',
+                label: 'P-38 WAYAN EDI SUPARMAN',
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
                 ]
             }
         }
@@ -696,7 +796,7 @@ app.get('/isi', (req, res) => {
                     font-weight: 500;
                     letter-spacing: -0.1px;
                 }
-                input[type="text"], input[type="number"] {
+                input[type="text"], input[type="number"], input[type="date"] {
                     padding: 16px 18px;
                     border: 1px solid rgba(255, 255, 255, 0.4);
                     border-radius: 15px;
@@ -707,7 +807,7 @@ app.get('/isi', (req, res) => {
                     color: #fff;
                     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
                 }
-                input[type="text"]:focus, input[type="number"]:focus {
+                input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
                     border: 1.5px solid #8EC5FC;
                     outline: none;
                     box-shadow: 0 0 0 4px rgba(142, 197, 252, 0.2);
@@ -832,7 +932,14 @@ app.post('/generate', (req, res) => {
     }
 
     const data = {};
-    t.fields.forEach(f => data[f.name] = req.body[f.name]);
+    t.fields.forEach(f => {
+    // Periksa jika field adalah 'tglsidang' atau field tanggal lain
+    if (f.name === 'tglsidang,tglsurat' || f.type === 'date') {
+        data[f.name] = formatDateID(req.body[f.name]);
+    } else {
+        data[f.name] = req.body[f.name];
+    }
+});
 
     let doc;
     try {
@@ -846,9 +953,22 @@ app.post('/generate', (req, res) => {
 
     const buf = doc.getZip().generate({ type: 'nodebuffer' });
     res.set('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-    res.set('Content-Disposition', `attachment; filename=hasil-${templateKey}.docx`);
-    res.send(buf);
-});
+    // Ambil data tanggal dari request body
+    const tglSidangRaw = req.body.tglsidang;
+
+    // Format tanggal ke DD-MM-YYYY
+    let formattedDate = '';
+    if (tglSidangRaw) {
+        const [year, month, day] = tglSidangRaw.split('-');
+        formattedDate = `${day}-${month}-${year}`;
+    }
+
+    // Gabungkan nama template dan tanggal untuk nama file
+    const filename = `${templateKey}-${formattedDate}.docx`;
+
+    res.set('Content-Disposition', `attachment; filename="${filename}"`);
+        res.send(buf);
+    });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
