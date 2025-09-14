@@ -81,8 +81,8 @@ const configs = {
                 fields: [
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
                 ]
             },
@@ -91,8 +91,8 @@ const configs = {
                 label: 'P-37 GEDE GAWATRA',
                 fields: [
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
                 ]
@@ -102,8 +102,8 @@ const configs = {
                 label: 'P-37 I MADE DWI MEI ANGGARA',
                 fields: [
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
                 ]
@@ -113,8 +113,8 @@ const configs = {
                 label: 'P-37 WAYAN EDI SUPARMAN',
                 fields: [
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
                 ]
@@ -133,8 +133,8 @@ const configs = {
                     { name: 'agama', label: 'Agama', type: 'text' },
                     { name: 'pekerjaan', label: 'Pekerjaan', type: 'text' },
                     { name: 'pendidikan', label: 'Pendidikan', type: 'text' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' }
                 ]
@@ -145,8 +145,8 @@ const configs = {
                 fields: [
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
                 ]
             },
@@ -156,8 +156,8 @@ const configs = {
                 fields: [
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
                 ]
             },
@@ -167,8 +167,22 @@ const configs = {
                 fields: [
                     { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
                     { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
-                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
+                    { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
+                ]
+            },
+            'P-38 SAKSI BRI': {
+                file: 'P-38 SAKSI BRI.docx',
+                label: 'P-38 SAKSI BRI',
+                hasDynamicTable: true,
+                fields: [
+                    { name: 'nomorsurat', label: 'Nomor Surat', type: 'text' },
+                    { name: 'tglsurat', label: 'Tanggal Surat', type: 'date' },
+                    { name: 'kepada', label: 'Kepada', type: 'text' },
+                    { name: 'di', label: 'Di', type: 'text' },
+                    { name: 'tglsidang', label: 'Tanggal Persidangan', type: 'date' },
+                    { name: 'harisidang', label: 'Hari Persidangan', type: 'text' },
                     { name: 'jamsidang', label: 'Jam Persidangan', type: 'text' }
                 ]
             }
@@ -573,7 +587,7 @@ app.get('/templates', (req, res) => {
                     font-weight: 600;
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;
-                    box-shadow: 0 5px 20px rgba(142, 197, 252, 0.3);
+                    box-shadow: 0 5px 20px rgba(142, 197,252, 0.3);
                     font-size: 18px;
                     letter-spacing: -0.2px;
                 }
@@ -676,7 +690,7 @@ app.get('/isi', (req, res) => {
                     height: 100%;
                 }
                 body {
-                    background-image: url('https://www.iclarified.com/images/news/97556/465557/465557.jpg');
+                    background-image: url('https://raw.githubusercontent.com/pidsusbuleleng/pidsusbuleleng/refs/heads/main/Asset/back.jpg');
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
@@ -694,6 +708,8 @@ app.get('/isi', (req, res) => {
                     top: 0;
                     left: 0;
                     right: 0;
+                    width: 100%;
+                    height: 64px; 
                     padding: 20px;
                     background: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(15px);
@@ -703,8 +719,8 @@ app.get('/isi', (req, res) => {
                     z-index: 1000;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    height: 64px; /* Menetapkan tinggi eksplisit */
                     box-sizing: border-box; /* Memastikan padding termasuk dalam tinggi */
+                    
                 }
                 .header-title {
                     font-size: 24px;
@@ -743,7 +759,9 @@ app.get('/isi', (req, res) => {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: 120px;
+                    margin-top: 64px;       /* sama dengan tinggi header */
+                    height: calc(100vh - 64px); /* sisa tinggi layar */ 
+                    padding: 80px;
                     box-sizing: border-box;
                     position: relative;
                     z-index: 1;
@@ -751,7 +769,7 @@ app.get('/isi', (req, res) => {
                 }
                 main::before {
                     content: '';
-                    position: absolute;
+                    position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
@@ -765,12 +783,14 @@ app.get('/isi', (req, res) => {
                     background: rgba(255, 255, 255, 0.1);
                     border-radius: 25px;
                     box-shadow: 0 10px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.2);
-                    padding: 40px;
+                    padding: 20px;
                     box-sizing: border-box;
                     backdrop-filter: blur(35px);
                     border: 1px solid rgba(255, 255, 255, 0.2);
-                    margin-top: 60px;
+                    margin-top: 0px;
+            
                 }
+                    
                 h2 {
                     text-align: left;
                     color: #fff;
@@ -856,6 +876,33 @@ app.get('/isi', (req, res) => {
                     transform: translateY(-3px);
                     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
                 }
+
+                /* Tambahan: tata letak baris saksi dan gaya tombol Hapus agar mirip tombol lain */
+                .saksi-row {
+                    /* jangan ubah layout .saksi-row (biar tetap mengikuti grid/form-grid) */
+                }
+                .remove-saksi {
+                    display: inline-block;
+                    padding: 10px 14px;
+                    margin-top: 18px; /* sejajarkan dengan input */
+                    margin-left: 8px;
+                    border-radius: 14px;
+                    border: none;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.18s ease-in-out;
+                    background: rgba(255, 255, 255, 0.12);
+                    color: #fff;
+                    border: 1px solid rgba(255,255,255,0.45);
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+                    backdrop-filter: blur(8px);
+                }
+                .remove-saksi:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+                }
                 .footer {
                     flex-shrink: 0; /* Mencegah footer menyusut */
                     padding: 20px 0;
@@ -872,6 +919,62 @@ app.get('/isi', (req, res) => {
                 function clearForm() {
                     document.querySelector('form').reset();
                 }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    var hasDynamicTable = ${t.hasDynamicTable ? 'true' : 'false'};
+                    if (hasDynamicTable) {
+                        document.getElementById('saksi-section').style.display = 'block';
+                    } else {
+                        document.getElementById('saksi-section').style.display = 'none';
+                    }
+
+                    var addSaksiBtn = document.getElementById('add-saksi');
+                    var dynamicSaksiFields = document.getElementById('dynamic-saksi-fields');
+
+                    if (addSaksiBtn && dynamicSaksiFields) {
+                        addSaksiBtn.addEventListener('click', function() {
+                            var newSaksiRow = document.createElement('div');
+                            newSaksiRow.className = 'saksi-row';
+                            newSaksiRow.innerHTML = ''
+                                + '<div class="form-item">'
+                                + '<label>Nama Saksi:</label>'
+                                + '<input type="text" name="namasaksi[]" required />'
+                                + '</div>'
+                                + '<div class="form-item">'
+                                + '<label>Alamat/Jabatan:</label>'
+                                + '<input type="text" name="alamatjabatan[]" required />'
+                                + '</div>'
+                                + '<button type="button" class="remove-saksi">Hapus</button>';
+                            dynamicSaksiFields.appendChild(newSaksiRow);
+                        });
+
+                        dynamicSaksiFields.addEventListener('click', function(e) {
+                            if (e.target && e.target.classList.contains('remove-saksi')) {
+                                if (document.querySelectorAll('.saksi-row').length > 1) {
+                                    e.target.closest('.saksi-row').remove();
+                                } else {
+                                    alert("Minimal harus ada satu saksi.");
+                                }
+                            }
+                        });
+                    }
+                    const tglInput = document.querySelector("input[name='tglsidang']");
+                    const hariInput = document.querySelector("input[name='harisidang']");
+
+                    if (tglInput && hariInput) {
+                        tglInput.addEventListener("change", function () {
+                            const date = new Date(this.value);
+                            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+
+                            if (!isNaN(date)) {
+                                hariInput.value = days[date.getDay()];
+                            } else {
+                                hariInput.value = "";
+                            }
+                        });
+                    }
+                });
+               
             </script>
         </head>
         <body>
@@ -888,6 +991,7 @@ app.get('/isi', (req, res) => {
                     <form method="POST" action="/generate">
                         <input type="hidden" name="stage" value="${stage}" />
                         <input type="hidden" name="template" value="${templateKey}" />
+                        
                         <div class="form-grid">
                             ${t.fields.map(f => `
                                 <div class="form-item">
@@ -896,6 +1000,26 @@ app.get('/isi', (req, res) => {
                                 </div>
                             `).join('')}
                         </div>
+
+                        <div id="saksi-section" style="display:none;">
+                        <hr style="border: 1px solid rgba(255,255,255,0.2); margin: 10px 0;">
+                        <h2>Daftar Saksi</h2>
+                        <div id="dynamic-saksi-fields" class="form-grid">
+                            <div class="saksi-row">
+                                <div class="form-item">
+                                    <label>Nama Saksi:</label>
+                                    <input type="text" name="namasaksi[]" />
+                                </div>
+                                <div class="form-item">
+                                    <label>Alamat/Jabatan:</label>
+                                    <input type="text" name="alamatjabatan[]" />
+                                </div>
+                                <button type="button" class="remove-saksi">Hapus</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-saksi" class="main-button" style="margin-top: 20px;">Tambah Saksi</button>
+                    </div>
+
                         <div class="button-group">
                             <button type="button" class="clear" onclick="clearForm()">Clear</button>
                             <button type="submit" class="main-button">Generate</button>
@@ -933,14 +1057,70 @@ app.post('/generate', (req, res) => {
 
     const data = {};
     t.fields.forEach(f => {
-    // Periksa jika field adalah 'tglsidang' atau field tanggal lain
-    if (f.name === 'tglsidang,tglsurat' || f.type === 'date') {
-        data[f.name] = formatDateID(req.body[f.name]);
-    } else {
-        data[f.name] = req.body[f.name];
-    }
-});
+        // Jika field tipe date, format ke bahasa Indonesia
+        if (f.type === 'date') {
+            data[f.name] = formatDateID(req.body[f.name]);
+        } else {
+            data[f.name] = req.body[f.name] !== undefined ? req.body[f.name] : '';
+        }
+    });
 
+    // Jika ada field namasaksi sebagai input tunggal, hilangkan koma trailing dan rapikan spasi
+    if (data.namasaksi) {
+        data.namasaksi = String(data.namasaksi).trim().replace(/,+$/g, '').replace(/\s+/g, ' ');
+    }
+    
+    // Siapkan variabel saksiArr pada scope yang lebih luas (dipakai juga saat fallback)
+    let saksiArr = null;
+    // Jika template mempunyai tabel dinamis (saksi), susun array untuk Docxtemplater
+    if (t.hasDynamicTable) {
+         // dukung berbagai variasi nama input: namasaksi / nama_saksi, alamatjabatan / alamat_jabatan
+         const rawNama = req.body.namasaksi || req.body['namasaksi'];
+         const rawAlamat = req.body.alamatjabatan || req.body['alamat_jabatan'];
+ 
+         const arrNama = Array.isArray(rawNama) ? rawNama : (rawNama ? [rawNama] : []);
+         const arrAlamat = Array.isArray(rawAlamat) ? rawAlamat : (rawAlamat ? [rawAlamat] : []);
+ 
+         // sanitize name values: trim, remove trailing commas, collapse spaces
+         const normalizeName = (arr) =>
+             arr.map(v => {
+                 let s = (typeof v === 'string' ? v.trim() : (v == null ? '' : String(v)));
+                 s = s.replace(/,+$/g, ''); // remove trailing commas
+                 s = s.replace(/\s+/g, ' '); // collapse spaces
+                 return s;
+             });
+         // generic normalize for other fields
+         const normalize = (arr) =>
+             arr.map(v => (typeof v === 'string' ? v.trim() : (v == null ? '' : String(v))));
+ 
+         const tNama = normalizeName(arrNama);
+         const tAlamat = normalize(arrAlamat);
+ 
+         // build rows, skip rows where both name and address are empty
+         const tmp = [];
+         const len = Math.max(tNama.length, tAlamat.length);
+         for (let i = 0; i < len; i++) {
+             const name = tNama[i] || '';
+             const addr = tAlamat[i] || '';
+             if (name === '' && addr === '') continue; // drop fully empty rows
+             tmp.push({ namasaksi: name, alamatjabatan: addr });
+         }
+ 
+         // If any entries exist, reindex them and add 'no' property to avoid Word auto-number gaps
+         saksiArr = tmp.map((item, idx) => ({
+            no: idx + 1,
+            namasaksi: item.namasaksi || '',
+            alamatjabatan: item.alamatjabatan || ''
+         }));
+ 
+         // assign to data for Docxtemplater
+         data.saksi = saksiArr;
+ 
+         // also set single placeholders (first entry) for templates expecting single values
+         data.namasaksi = saksiArr[0] ? saksiArr[0].namasaksi : '';
+         data.alamatjabatan = saksiArr[0] ? saksiArr[0].alamatjabatan : '';
+     }
+ 
     let doc;
     try {
         const zip = new PizZip(content);
@@ -948,7 +1128,32 @@ app.post('/generate', (req, res) => {
         doc.setData(data);
         doc.render();
     } catch (error) {
-        return res.status(500).send('Template error: ' + error.message);
+        // Jika template menggunakan raw tag untuk 'saksi' (mengharapkan string), konversi array jadi string lalu coba ulang
+        if (error && error.properties && error.properties.id === 'invalid_raw_xml_value' && error.properties.xtag === 'saksi' && saksiArr) {
+            // escape XML special chars
+            const escapeXml = (str) => String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&apos;');
+ 
+            // Buat representasi teks sederhana: "1. Name - Address" per baris
+            const rowsText = saksiArr.map(r => `${r.no}. ${escapeXml(r.namasaksi)} - ${escapeXml(r.alamatjabatan)}`).join('\n');
+            data.saksi = rowsText;
+ 
+            // Coba render ulang dengan data.saksi sebagai string
+            try {
+                const zip2 = new PizZip(content);
+                doc = new Docxtemplater(zip2, { paragraphLoop: true, linebreaks: true });
+                doc.setData(data);
+                doc.render();
+            } catch (err2) {
+                return res.status(500).send('Template error (after fallback): ' + err2.message);
+            }
+        } else {
+            return res.status(500).send('Template error: ' + error.message);
+        }
     }
 
     const buf = doc.getZip().generate({ type: 'nodebuffer' });
@@ -963,8 +1168,33 @@ app.post('/generate', (req, res) => {
         formattedDate = `${day}-${month}-${year}`;
     }
 
+    // sanitize helper for filenames (remove chars not allowed in filenames)
+    const sanitizeForFilename = (str) => {
+        if (!str) return '';
+        return String(str)
+            // Hapus karakter ilegal untuk filename dan koma
+            .replace(/[\/\\:*?"<>|,]+/g, '')
+            // gabungkan spasi berlebih jadi satu
+            .replace(/\s+/g, ' ')
+            .trim();
+    };
+
     // Gabungkan nama template dan tanggal untuk nama file
-    const filename = `${templateKey} ${formattedDate}.docx`;
+    let filename;
+    if (templateKey === 'P-37 SAKSI BRI') {
+        // prefer first entry from saksiArr (built earlier), then data.namasaksi, then raw request
+        const firstSaksi = (saksiArr && saksiArr[0] && saksiArr[0].namasaksi)
+            ? saksiArr[0].namasaksi
+            : (data.namasaksi || req.body.namasaksi || '');
+        const namePart = sanitizeForFilename(firstSaksi);
+        if (namePart) {
+            filename = `${templateKey} ${namePart} ${formattedDate}.docx`;
+        } else {
+            filename = `${templateKey} ${formattedDate}.docx`;
+        }
+    } else {
+        filename = `${templateKey} ${formattedDate}.docx`;
+    }
 
     res.set('Content-Disposition', `attachment; filename="${filename}"`);
         res.send(buf);
